@@ -13,7 +13,7 @@ class AppColors {
 
 class AppTheme {
   static ThemeData darkTheme = ThemeData(
-    colorScheme: ColorScheme.light(primary: AppColors.primary),
+    colorScheme: ColorScheme.dark(primary: AppColors.primary),
     scaffoldBackgroundColor: AppColors.primary,
 
     appBarTheme: AppBarTheme(
