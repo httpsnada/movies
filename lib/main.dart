@@ -1,13 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:movies/core/routes/app_routes.dart';
-import 'package:movies/features/browse/view/browse_view.dart';
-import 'package:movies/features/home/view/home_view.dart';
-import 'package:movies/features/movie_details/view/movie_details_page.dart';
-import 'package:movies/features/profile/view/profile_view.dart';
-import 'package:movies/features/search/view/search_view.dart';
-import 'package:movies/features/shared/app_shell.dart';
-
-import 'core/theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +7,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
