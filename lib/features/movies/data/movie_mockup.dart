@@ -36,7 +36,7 @@ class MovieMockup {
           'This is a placeholder description for the movie. The design/dev team can replace this '
           'with the real synopsis, cast info, trailers and anything else later. For now it serves as '
           'a base structure so the rest of the UI flows correctly.',
-      genres: ['Action', 'Drama'],
+      genres: ['Action', 'Comedy'],
       state: 'Coming Soon',
       screenShoots: [AppImages.scene1, AppImages.scene2, AppImages.scene3],
       cast: ["Hayley Atwell", "Elizabeth Olsen", " Charlize Theron"],
@@ -93,7 +93,7 @@ class MovieMockup {
           'This is a placeholder description for the movie. The design/dev team can replace this '
           'with the real synopsis, cast info, trailers and anything else later. For now it serves as '
           'a base structure so the rest of the UI flows correctly.',
-      genres: ['Action', 'Drama'],
+      genres: ['Action', 'Adventure'],
       state: 'Coming Soon',
       screenShoots: [AppImages.scene1, AppImages.scene2, AppImages.scene3],
       cast: ["Hayley Atwell", "Elizabeth Olsen", " Charlize Theron"],
@@ -112,7 +112,7 @@ class MovieMockup {
           'This is a placeholder description for the movie. The design/dev team can replace this '
           'with the real synopsis, cast info, trailers and anything else later. For now it serves as '
           'a base structure so the rest of the UI flows correctly.',
-      genres: ['Action', 'Drama'],
+      genres: ['Action', 'Si-Fi'],
       state: 'Coming Soon',
       screenShoots: [AppImages.scene1, AppImages.scene2, AppImages.scene3],
       cast: ["Hayley Atwell", "Elizabeth Olsen", " Charlize Theron"],
