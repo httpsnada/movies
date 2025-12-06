@@ -1,4 +1,5 @@
 import 'package:movies/core/theme/app_assets.dart';
+import 'package:movies/features/movies/data/cast_data.dart';
 
 import 'movie_data.dart';
 
@@ -20,7 +21,30 @@ class MovieMockup {
       genres: ['Action', 'Drama'],
       state: 'Coming Soon',
       screenShoots: [AppImages.scene1, AppImages.scene2, AppImages.scene3],
-      cast: ["Hayley Atwell", "Elizabeth Olsen", " Charlize Theron"],
+      cast: [
+        CastData(
+          image: AppImages.actor1,
+          name: "Hayley Atwell",
+          character: "Captain Carter",
+        ),
+        CastData(
+          image: AppImages.actor2,
+          name: "Elizabeth Olsen",
+          character: "Wanda Maximoff / The Scarlet Witch",
+        ),
+        CastData(
+          image: AppImages.actor3,
+          name: "Charlize Theron",
+          character: "Clea",
+        ),
+        CastData(
+          image: AppImages.actor4,
+          name: "Rachel McAdams",
+          character: "Dr. Christine Palmer",
+        ),
+      ],
+
+      similar: [],
     ),
 
     MovieData(
@@ -39,7 +63,29 @@ class MovieMockup {
       genres: ['Action', 'Drama'],
       state: 'Coming Soon',
       screenShoots: [AppImages.scene1, AppImages.scene2, AppImages.scene3],
-      cast: ["Hayley Atwell", "Elizabeth Olsen", " Charlize Theron"],
+      cast: [
+        CastData(
+          image: AppImages.actor1,
+          name: "Hayley Atwell",
+          character: "Captain Carter",
+        ),
+        CastData(
+          image: AppImages.actor2,
+          name: "Elizabeth Olsen",
+          character: "Wanda Maximoff / The Scarlet Witch",
+        ),
+        CastData(
+          image: AppImages.actor3,
+          name: "Charlize Theron",
+          character: "Clea",
+        ),
+        CastData(
+          image: AppImages.actor4,
+          name: "Rachel McAdams",
+          character: "Dr. Christine Palmer",
+        ),
+      ],
+      similar: [],
     ),
 
     MovieData(
@@ -58,7 +104,29 @@ class MovieMockup {
       genres: ['Action', 'Drama'],
       state: 'Coming Soon',
       screenShoots: [AppImages.scene1, AppImages.scene2, AppImages.scene3],
-      cast: ["Hayley Atwell", "Elizabeth Olsen", " Charlize Theron"],
+      cast: [
+        CastData(
+          image: AppImages.actor1,
+          name: "Hayley Atwell",
+          character: "Captain Carter",
+        ),
+        CastData(
+          image: AppImages.actor2,
+          name: "Elizabeth Olsen",
+          character: "Wanda Maximoff / The Scarlet Witch",
+        ),
+        CastData(
+          image: AppImages.actor3,
+          name: "Charlize Theron",
+          character: "Clea",
+        ),
+        CastData(
+          image: AppImages.actor4,
+          name: "Rachel McAdams",
+          character: "Dr. Christine Palmer",
+        ),
+      ],
+      similar: [],
     ),
 
     MovieData(
@@ -77,7 +145,29 @@ class MovieMockup {
       genres: ['Action', 'Drama'],
       state: 'Coming Soon',
       screenShoots: [AppImages.scene1, AppImages.scene2, AppImages.scene3],
-      cast: ["Hayley Atwell", "Elizabeth Olsen", " Charlize Theron"],
+      cast: [
+        CastData(
+          image: AppImages.actor1,
+          name: "Hayley Atwell",
+          character: "Captain Carter",
+        ),
+        CastData(
+          image: AppImages.actor2,
+          name: "Elizabeth Olsen",
+          character: "Wanda Maximoff / The Scarlet Witch",
+        ),
+        CastData(
+          image: AppImages.actor3,
+          name: "Charlize Theron",
+          character: "Clea",
+        ),
+        CastData(
+          image: AppImages.actor4,
+          name: "Rachel McAdams",
+          character: "Dr. Christine Palmer",
+        ),
+      ],
+      similar: [],
     ),
 
     MovieData(
@@ -96,7 +186,29 @@ class MovieMockup {
       genres: ['Action', 'Drama'],
       state: 'Coming Soon',
       screenShoots: [AppImages.scene1, AppImages.scene2, AppImages.scene3],
-      cast: ["Hayley Atwell", "Elizabeth Olsen", " Charlize Theron"],
+      cast: [
+        CastData(
+          image: AppImages.actor1,
+          name: "Hayley Atwell",
+          character: "Captain Carter",
+        ),
+        CastData(
+          image: AppImages.actor2,
+          name: "Elizabeth Olsen",
+          character: "Wanda Maximoff / The Scarlet Witch",
+        ),
+        CastData(
+          image: AppImages.actor3,
+          name: "Charlize Theron",
+          character: "Clea",
+        ),
+        CastData(
+          image: AppImages.actor4,
+          name: "Rachel McAdams",
+          character: "Dr. Christine Palmer",
+        ),
+      ],
+      similar: [],
     ),
 
     MovieData(
@@ -115,7 +227,29 @@ class MovieMockup {
       genres: ['Action', 'Drama'],
       state: 'Coming Soon',
       screenShoots: [AppImages.scene1, AppImages.scene2, AppImages.scene3],
-      cast: ["Hayley Atwell", "Elizabeth Olsen", " Charlize Theron"],
+      cast: [
+        CastData(
+          image: AppImages.actor1,
+          name: "Hayley Atwell",
+          character: "Captain Carter",
+        ),
+        CastData(
+          image: AppImages.actor2,
+          name: "Elizabeth Olsen",
+          character: "Wanda Maximoff / The Scarlet Witch",
+        ),
+        CastData(
+          image: AppImages.actor3,
+          name: "Charlize Theron",
+          character: "Clea",
+        ),
+        CastData(
+          image: AppImages.actor4,
+          name: "Rachel McAdams",
+          character: "Dr. Christine Palmer",
+        ),
+      ],
+      similar: [],
     ),
 
     MovieData(
@@ -134,7 +268,29 @@ class MovieMockup {
       genres: ['Action', 'Drama'],
       state: 'Coming Soon',
       screenShoots: [AppImages.scene1, AppImages.scene2, AppImages.scene3],
-      cast: ["Hayley Atwell", "Elizabeth Olsen", " Charlize Theron"],
+      cast: [
+        CastData(
+          image: AppImages.actor1,
+          name: "Hayley Atwell",
+          character: "Captain Carter",
+        ),
+        CastData(
+          image: AppImages.actor2,
+          name: "Elizabeth Olsen",
+          character: "Wanda Maximoff / The Scarlet Witch",
+        ),
+        CastData(
+          image: AppImages.actor3,
+          name: "Charlize Theron",
+          character: "Clea",
+        ),
+        CastData(
+          image: AppImages.actor4,
+          name: "Rachel McAdams",
+          character: "Dr. Christine Palmer",
+        ),
+      ],
+      similar: [],
     ),
 
     MovieData(
@@ -153,7 +309,39 @@ class MovieMockup {
       genres: ['Action', 'Drama'],
       state: 'Coming Soon',
       screenShoots: [AppImages.scene1, AppImages.scene2, AppImages.scene3],
-      cast: ["Hayley Atwell", "Elizabeth Olsen", " Charlize Theron"],
+      cast: [
+        CastData(
+          image: AppImages.actor1,
+          name: "Hayley Atwell",
+          character: "Captain Carter",
+        ),
+        CastData(
+          image: AppImages.actor2,
+          name: "Elizabeth Olsen",
+          character: "Wanda Maximoff / The Scarlet Witch",
+        ),
+        CastData(
+          image: AppImages.actor3,
+          name: "Charlize Theron",
+          character: "Clea",
+        ),
+        CastData(
+          image: AppImages.actor4,
+          name: "Rachel McAdams",
+          character: "Dr. Christine Palmer",
+        ),
+      ],
+      similar: [],
     ),
   ];
+
+  void loadSimilar() {
+    movies[0].similar.addAll([movies[1], movies[2], movies[5], movies[6]]);
+    movies[1].similar.addAll([movies[1], movies[2], movies[5], movies[6]]);
+    movies[2].similar.addAll([movies[1], movies[2], movies[5], movies[6]]);
+    movies[3].similar.addAll([movies[1], movies[2], movies[5], movies[6]]);
+    movies[4].similar.addAll([movies[1], movies[2], movies[5], movies[6]]);
+    movies[5].similar.addAll([movies[1], movies[2], movies[5], movies[6]]);
+    movies[6].similar.addAll([movies[1], movies[2], movies[5], movies[6]]);
+  }
 }

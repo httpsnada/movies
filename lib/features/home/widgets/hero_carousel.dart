@@ -8,7 +8,7 @@ import '../../../core/routes/app_routes.dart';
 class HeroCarousel extends StatefulWidget {
   final List<MovieData> movies;
 
-  const HeroCarousel({super.key, required this.movies});
+  const   HeroCarousel({super.key, required this.movies});
 
   @override
   State<HeroCarousel> createState() => _HeroCarouselState();

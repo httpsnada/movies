@@ -30,6 +30,10 @@ class AppImages {
   static const String scene1 = 'assets/images/scene1.jpg';
   static const String scene2 = 'assets/images/scene2.jpg';
   static const String scene3 = 'assets/images/scene3.jpg';
+  static const String actor1 = 'assets/images/hayley_atwell.jpg';
+  static const String actor2 = 'assets/images/elizabeth_olsen.jpg';
+  static const String actor3 = 'assets/images/charlize_theron.jpg';
+  static const String actor4 = 'assets/images/rachel_mcAdams.jpg';
 }
 
 class AppIcons {
@@ -52,4 +56,6 @@ class AppIcons {
   static const String update_profile_name =
       'assets/icons/update_profile_name.svg';
   static const String watch_list = 'assets/icons/watch_list.svg';
+  static const String saved = 'assets/icons/saved.svg';
+  static const String playButton = 'assets/icons/play.svg';
 }

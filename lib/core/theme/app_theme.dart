@@ -7,6 +7,8 @@ class AppColors {
   static const Color charcoal = Color(0XFF282A28);
   static const Color yellow = Color(0XFFF6BD00);
   static const Color red = Color(0XFFE82626);
+  static const Color lightGrey = Color(0XFFADADAD);
+  static const Color darkGrey = Color(0XFF282A28);
 
   // gradient colors
 }

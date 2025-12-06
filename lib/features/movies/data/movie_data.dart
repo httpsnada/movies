@@ -1,3 +1,5 @@
+import 'package:movies/features/movies/data/cast_data.dart';
+
 class MovieData {
   MovieData({
     required this.image,
@@ -10,6 +12,7 @@ class MovieData {
     required this.state,
     required this.screenShoots,
     required this.cast,
+    required this.similar,
   });
 
   final String image;
@@ -21,5 +24,6 @@ class MovieData {
   final List<String> genres;
   final String state;
   final List<String> screenShoots;
-  final List<String> cast;
+  final List<CastData> cast;
+  final List<MovieData> similar;
 }
