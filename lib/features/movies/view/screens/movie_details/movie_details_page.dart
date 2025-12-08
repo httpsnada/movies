@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/theme/app_theme.dart';
-import '../../movies/data/movie_data.dart';
+import '../../../../../../core/theme/app_theme.dart';
+import '../../../data/movie_data.dart';
+
 
 class MovieDetailsPage extends StatelessWidget {
   const MovieDetailsPage({super.key});

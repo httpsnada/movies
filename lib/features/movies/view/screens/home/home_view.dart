@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:movies/core/theme/app_theme.dart';
 import 'package:movies/features/movies/data/movie_mockup.dart';
 
-import '../../movies/data/movie_data.dart';
-import '../widgets/hero_carousel.dart';
-import '../widgets/movie_card.dart';
+import '../../../data/movie_data.dart';
+import '../../widgets/hero_carousel.dart';
+import '../../widgets/movie_card.dart';
 import 'movie_grid_page.dart';
 
 class HomeView extends StatelessWidget {

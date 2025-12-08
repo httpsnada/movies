@@ -3,7 +3,7 @@ import 'package:movies/core/theme/app_assets.dart';
 import 'package:movies/core/theme/app_theme.dart';
 import 'package:movies/features/movies/data/movie_data.dart';
 
-import '../../../core/routes/app_routes.dart';
+import '../../../../../core/routes/app_routes.dart';
 
 class HeroCarousel extends StatefulWidget {
   final List<MovieData> movies;

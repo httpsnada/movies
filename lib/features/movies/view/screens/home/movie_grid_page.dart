@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../movies/data/movie_data.dart';
-import '../widgets/movie_card.dart';
+import '../../../data/movie_data.dart';
+import '../../widgets/movie_card.dart';
+
+
 
 class MoviesGridPage extends StatelessWidget {
   final String title;

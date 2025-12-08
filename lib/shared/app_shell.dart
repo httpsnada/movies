@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../browse/view/browse_view.dart';
-import '../home/view/home_view.dart';
-import '../home/widgets/bottom_nav_bar.dart';
-import '../profile/view/profile_view.dart';
-import '../search/view/search_view.dart';
+import '../features/movies/view/screens/browse/browse_view.dart';
+import '../features/movies/view/screens/home/home_view.dart';
+import '../features/movies/view/screens/profile/profile_view.dart';
+import '../features/movies/view/screens/search/search_view.dart';
+import '../features/movies/view/widgets/bottom_nav_bar.dart';
+
+
 
 class AppShell extends StatefulWidget {
   const AppShell({super.key});
+
   @override
   State<AppShell> createState() => _AppShellState();
 }
@@ -30,10 +33,7 @@ class _AppShellState extends State<AppShell> {
       backgroundColor: Colors.transparent,
 
       // IndexedStack preserves states of pages (good UX)
-      body: IndexedStack(
-        index: _index,
-        children: _pages,
-      ),
+      body: IndexedStack(index: _index, children: _pages),
 
       // Bottom nav visible on all main screens
       bottomNavigationBar: SafeArea(
@@ -46,7 +46,13 @@ class _AppShellState extends State<AppShell> {
               // use a semi-opaque container so the rounded nav looks like a floating bar
               color: const Color(0xFF282A28), // AppColor.grey if you prefer
               borderRadius: BorderRadius.circular(16),
-              boxShadow: const [BoxShadow(color: Colors.black45, blurRadius: 8, offset: Offset(0, 2))],
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black45,
+                  blurRadius: 8,
+                  offset: Offset(0, 2),
+                ),
+              ],
             ),
             child: SafeArea(
               top: false,

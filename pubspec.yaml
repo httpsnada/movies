@@ -37,8 +37,11 @@ dependencies:
   flutter_svg: ^2.2.2
   google_fonts: ^6.3.2
   intl: ^0.20.2
+  dio: ^5.9.0
   shared_preferences: ^2.5.3
   cached_network_image: ^3.4.1
+  flutter_bloc: ^9.1.1
+  equatable: ^2.0.7
 
 dev_dependencies:
   flutter_test:

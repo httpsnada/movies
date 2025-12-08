@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies/shared/app_shell.dart';
 
+import 'core/network/api_service.dart';
 import 'core/routes/app_routes.dart';
 import 'core/theme/app_theme.dart';
-import 'features/browse/view/browse_view.dart';
-import 'features/home/view/home_view.dart';
-import 'features/movie_details/view/movie_details_page.dart';
-import 'features/profile/view/profile_view.dart';
-import 'features/search/view/search_view.dart';
-import 'features/shared/app_shell.dart';
+import 'features/auth/view/bloc/auth_bloc.dart';
+import 'features/movies/view/screens/browse/browse_view.dart';
+import 'features/movies/view/screens/home/home_view.dart';
+import 'features/movies/view/screens/movie_details/movie_details_page.dart';
+import 'features/movies/view/screens/profile/profile_view.dart';
+import 'features/movies/view/screens/search/search_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiBlocProvider(
+      providers: [BlocProvider(create: (_) => AuthBloc(ApiService()))],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
