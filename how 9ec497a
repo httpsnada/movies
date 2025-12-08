@@ -1,0 +1,31 @@
+* [33mb7c05b9[m[33m ([m[1;31morigin/feature/core-setup[m[33m, [m[1;32mfeature/core-setup[m[33m)[m core setup: added api services, network, bloc structure
+[31m|[m * [33mcd402b2[m[33m ([m[1;31morigin/feature/movie_details_ui[m[33m)[m feat: update movie details UI
+[31m|[m [32m|[m * [33mc2a2b7d[m[33m ([m[1;31morigin/feature/browse_ui[m[33m)[m feat: Implement dynamic Browse screen with category filtering
+[31m|[m [32m|[m[31m/[m  
+[31m|[m[31m/[m[32m|[m   
+* [32m|[m [33m0537b66[m[33m ([m[1;31morigin/development[m[33m)[m feat: Added missing libraries in the main file
+[32m|[m[32m/[m  
+[32m|[m * [33m6bc4b82[m[33m ([m[1;31morigin/feature/search_ui[m[33m)[m feat: Implement search functionality and UI
+[32m|[m[32m/[m  
+*   [33m3bc3dc3[m Merge pull request #2 from httpsnada/feature/home_rebuild
+[35m|[m[36m\[m  
+[35m|[m *   [33m2f268d7[m[33m ([m[1;31morigin/feature/home_rebuild[m[33m)[m Merge remote-tracking branch 'origin/development' into main_layout
+[35m|[m [1;31m|[m[35m\[m  
+[35m|[m [1;31m|[m[35m/[m  
+[35m|[m[35m/[m[1;31m|[m   
+[35m|[m * [33md7850a6[m feat: Refactor Home screen and implement core data structure
+[35m|[m * [33mefca255[m feat: Implement core UI screens, navigation, and assets
+[35m|[m [1;32m|[m * [33m9ec497a[m[33m ([m[1;36mHEAD -> [m[1;32mfeature/profile_ui[m[33m, [m[1;31morigin/feature/profile_ui[m[33m)[m Complete Profile UI + prepared UI for API integration + tested flow using dummy data
+[35m|[m [1;32m|[m * [33m21d1468[m register and login pages
+[35m|[m [1;32m|[m[1;32m/[m  
+[35m|[m [1;32m|[m * [33mfdb252b[m[33m ([m[1;31morigin/feature/update_profile_ui[m[33m)[m feat: Add update profile screen
+[35m|[m [1;32m|[m[35m/[m  
+[35m|[m[35m/[m[1;32m|[m   
+[35m|[m [1;32m|[m * [33me7a5add[m[33m ([m[1;31morigin/register-login-ui[m[33m)[m registerScreen and LoginScreen
+[35m|[m [1;32m|[m[1;32m/[m  
+[35m|[m [1;32m|[m * [33m5ad7659[m[33m ([m[1;31morigin/feature/reset_password_ui[m[33m)[m feat: Add forgot password screen
+[35m|[m [1;32m|[m[35m/[m  
+[35m|[m[35m/[m[1;32m|[m   
+* [1;32m|[m [33m8f252fc[m feat: Add core theme, assets, and routing
+[1;32m|[m[1;32m/[m  
+* [33mc4c5a7d[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/backup/onboarding_splash_before_cleanup[m[33m)[m feat: Initialize Flutter project

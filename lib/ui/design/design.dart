@@ -4,8 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 class AppColors {
   static const Color Primary = Color(0xFFF6BD00);
   static const Color backgroundColor = Color(0xFF121312);
-  static const Color Grey = Color(0xFF282A28);
+  static const Color darkGrey = Color(0xFF282A28);
   static const Color White = Color(0xFFFFFFFF);
+  static const Color Red = Color(0xFFE82626);
 }
 
 class AppImages {
@@ -22,6 +23,11 @@ class AppImages {
   static const String avatar7 = 'assets/images/avatar7.png';
   static const String avatar8 = 'assets/images/avatar8.png';
   static const String avatar9 = 'assets/images/avatar9.png';
+
+  static const String popcorn = 'assets/images/popcorn.png';
+  static const String avengersPoster = 'assets/images/avengers.jpg';
+  static const String blackWidowPoster = 'assets/images/blackwidow.png';
+  static const String wednesdayPoster = 'assets/images/wednesday.jpg';
 }
 
 class AppIcons {
@@ -101,14 +107,14 @@ class AppThemes {
       floatingLabelBehavior: FloatingLabelBehavior.auto,
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.all(Radius.circular(16.0)),
-        borderSide: BorderSide(color: AppColors.Grey, width: 1.0),
+        borderSide: BorderSide(color: AppColors.darkGrey, width: 1.0),
       ),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.all(Radius.circular(16.0)),
-        borderSide: BorderSide(color: AppColors.Grey, width: 1.0),
+        borderSide: BorderSide(color: AppColors.darkGrey, width: 1.0),
       ),
       filled: true,
-      fillColor: AppColors.Grey,
+      fillColor: AppColors.darkGrey,
       labelStyle: GoogleFonts.roboto(
         color: AppColors.White,
         fontSize: 16,
