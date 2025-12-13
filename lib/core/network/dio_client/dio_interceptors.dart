@@ -1,31 +1,13 @@
 import 'package:dio/dio.dart';
-
 import '../../utils/pref_helper.dart';
 
-class DioClient {
-  final Dio _dio = Dio(
-    BaseOptions(
-      baseUrl: 'https://yts.lt/api/v2/',
-      headers: {
-        'Content-Type': 'application/json',
-
-      },
-    ),
-  );
-
-  DioClient() {
-    _dio.interceptors.add(
-      InterceptorsWrapper(
-        onRequest: (options, handler)async {
-          final token = await PrefHelper.getToken();
-          if (token != null && token.isNotEmpty) {
-            options.headers["Authorization"] = "Bearer $token";
-          }
-          return handler.next(options);
-        },
-      ),
-    );
+class AuthInterceptor extends InterceptorsWrapper {
+  @override
+  void onRequest(RequestOptions options, RequestInterceptorHandler handler) async {
+    final token = await PrefHelper.getToken();
+    if (token != null && token.isNotEmpty) {
+      options.headers["Authorization"] = "Bearer $token";
+    }
+    handler.next(options);
   }
-
-  Dio get dio => _dio;
 }

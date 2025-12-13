@@ -5,4 +5,15 @@ abstract class MoviesEvent extends Equatable {
   List<Object?> get props => [];
 }
 
-class GetMoviesEvent extends MoviesEvent {}
+// Fetch popular movies
+class FetchMoviesEvent extends MoviesEvent {}
+
+// Search movies
+class SearchMoviesEvent extends MoviesEvent {
+  final String query;
+
+  SearchMoviesEvent(this.query);
+
+  @override
+  List<Object?> get props => [query];
+}
