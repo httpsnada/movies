@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:movies/ui/common/custom_formField.dart';
 import 'package:movies/ui/common/language_sliding_switch.dart';
-import 'package:movies/ui/design/design.dart';
 import 'package:movies/ui/common/validators.dart';
-import 'package:movies/ui/screens/login/view/login_screen.dart';
+import 'package:movies/ui/design/design.dart';
 
-import '../../../../routes.dart';
+import '../../../../core/routes/app_routes.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -135,13 +134,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   onPressed: isLoading ? null : _createAccount,
                   child: isLoading
                       ? const Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CircularProgressIndicator(),
-                      SizedBox(width: 12),
-                      Text("Creating Account...")
-                    ],
-                  )
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            CircularProgressIndicator(),
+                            SizedBox(width: 12),
+                            Text("Creating Account..."),
+                          ],
+                        )
                       : const Text("Create Account"),
                 ),
                 Row(
@@ -153,7 +152,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     TextButton(
                       onPressed: () {
-                        Navigator.pushReplacementNamed(context, AppRoutes.LoginScreen.route);
+                        Navigator.pushReplacementNamed(
+                          context,
+                          AppRoutes.Login.routeName,
+                        );
                       },
                       child: const Text(
                         "Login",
@@ -166,10 +168,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ],
                 ),
                 const SizedBox(height: 12),
-                Align(
-                  alignment: Alignment.center,
-                  child: LanguageSwitcher(),
-                ),
+                Align(alignment: Alignment.center, child: LanguageSwitcher()),
               ],
             ),
           ),
