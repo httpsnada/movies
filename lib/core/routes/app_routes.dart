@@ -4,6 +4,7 @@ enum AppRoutes {
   Register("RegisterScreen"),
   ForgetPassword("ForgetPasswordScreen"),
   Home("HomeScreen"),
+  UpdateProfile("UpdateProfile"),
   AppShell("AppShell"),
   Browse("BrowseView"),
   Search("SearchView"),
