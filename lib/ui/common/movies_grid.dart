@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../data/dummy_movies.dart';
+import 'package:movies/features/movies/data/movie_mockup.dart';
 
 class MoviesGrid extends StatelessWidget {
   const MoviesGrid({super.key});
@@ -15,9 +14,9 @@ class MoviesGrid extends StatelessWidget {
         crossAxisSpacing: 12,
         childAspectRatio: 0.68,
       ),
-      itemCount: watchList.length,
+      itemCount: MovieMockup.movies.length,
       itemBuilder: (context, index) {
-        final movie = watchList[index];
+        final movie = MovieMockup.movies[index];
 
         return Column(
           children: [

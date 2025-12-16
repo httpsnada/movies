@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies/features/auth/view/screens/login_screen.dart';
+import 'package:movies/features/auth/view/screens/register_screen.dart';
 import 'package:movies/shared/app_shell.dart';
 import 'package:movies/ui/design/design.dart';
+
 import 'core/network/api_service.dart';
 import 'core/network/dio_client/dio_auth_client.dart';
 import 'core/network/dio_client/dio_movie_client.dart';
@@ -47,6 +50,8 @@ class MyApp extends StatelessWidget {
         AppRoutes.Search.routeName: (context) => SearchView(),
         AppRoutes.Browse.routeName: (context) => BrowseView(),
         AppRoutes.Profile.routeName: (context) => ProfileView(),
+        AppRoutes.Login.routeName: (context) => LoginScreen(),
+        AppRoutes.Register.routeName: (context) => RegisterScreen(),
         AppRoutes.MovieDetails.routeName: (context) => MovieDetailsPage(),
       },
     );

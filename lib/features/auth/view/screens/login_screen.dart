@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movies/ui/common/language_sliding_switch.dart';
+
 import '../../../../core/routes/app_routes.dart';
-import '../../../common/custom_formField.dart';
-import '../../../common/validators.dart';
-import '../../../design/design.dart';
+import '../../../../ui/common/custom_formField.dart';
+import '../../../../ui/common/validators.dart';
+import '../../../../ui/design/design.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({super.key});
