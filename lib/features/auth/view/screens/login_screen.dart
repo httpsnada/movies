@@ -28,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 100),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 100),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -73,8 +73,20 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         TextButton(
-                          onPressed: () {},
-                          child: Text("Forget Password ?"),
+                          onPressed: () {
+                            Navigator.pushNamed(
+                              context,
+                              AppRoutes.ForgetPassword.routeName,
+                            );
+                          },
+                          child: Text(
+                            "Forget Password ?",
+                            style: TextStyle(
+                              color: AppColors.Primary,
+                              fontSize: 16,
+                              fontStyle: GoogleFonts.roboto().fontStyle,
+                            ),
+                          ),
                         ),
                       ],
                     ),
@@ -105,12 +117,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         TextButton(
                           onPressed: () {
-                            Navigator.pushReplacementNamed(context, AppRoutes.Register.routeName);
-
+                            Navigator.pushReplacementNamed(
+                              context,
+                              AppRoutes.Register.routeName,
+                            );
                           },
                           child: Text(
                             "Create One",
                             style: TextStyle(
+                              color: AppColors.Primary,
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
@@ -161,9 +176,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(height: 30),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        LanguageSwitcher(),
-                      ],
+                      children: [LanguageSwitcher()],
                     ),
                   ],
                 ),

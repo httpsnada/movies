@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movies/core/theme/app_assets.dart';
 import 'package:movies/features/movies/data/movie_data.dart';
 import 'package:movies/features/movies/data/movie_mockup.dart';
-import 'package:movies/features/search/widgets/search_field.dart';
+import 'package:movies/ui/common/search_field.dart';
 
 import '../../widgets/movie_card.dart';
 

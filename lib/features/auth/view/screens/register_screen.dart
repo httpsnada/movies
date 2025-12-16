@@ -29,12 +29,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text("Register"),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -160,6 +155,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       child: const Text(
                         "Login",
                         style: TextStyle(
+                          color: AppColors.Primary,
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
                         ),

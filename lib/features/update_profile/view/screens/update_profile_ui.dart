@@ -26,7 +26,9 @@ class _UpdateProfileState extends State<UpdateProfile> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Pick Avatar"),
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: () {
+          Navigator.pop(context);
+        }, icon: Icon(Icons.arrow_back)),
       ),
 
       body: SingleChildScrollView(

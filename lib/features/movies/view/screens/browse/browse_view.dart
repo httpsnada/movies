@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies/features/browse/widgets/tab_bar_item.dart';
+import 'package:movies/ui/common/tab_bar_item.dart';
 
 import '../../../data/movie_data.dart';
 import '../../../data/movie_mockup.dart';

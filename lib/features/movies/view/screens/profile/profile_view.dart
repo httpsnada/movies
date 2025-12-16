@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movies/features/movies/data/movie_mockup.dart';
 
+import '../../../../../core/routes/app_routes.dart';
 import '../../../../../ui/common/empty_list.dart';
 import '../../../../../ui/common/movies_grid.dart';
 import '../../../../../ui/design/design.dart';
@@ -16,7 +17,7 @@ class ProfileView extends StatelessWidget {
           children: [
             Container(
               color: AppColors.darkGrey,
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -26,7 +27,7 @@ class ProfileView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Image.asset(AppImages.avatar8, width: 118, height: 118),
-                      const SizedBox(width: 50),
+                      const SizedBox(width: 30),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -35,7 +36,7 @@ class ProfileView extends StatelessWidget {
                               Text(
                                 "12",
                                 style: AppThemes.lightTheme.textTheme.titleLarge
-                                    ?.copyWith(fontSize: 36),
+                                    ?.copyWith(fontSize: 32),
                               ),
                               Text(
                                 "Wish List",
@@ -44,13 +45,13 @@ class ProfileView extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(width: 30),
+                          SizedBox(width: 12),
                           Column(
                             children: [
                               Text(
                                 "10",
                                 style: AppThemes.lightTheme.textTheme.titleLarge
-                                    ?.copyWith(fontSize: 36),
+                                    ?.copyWith(fontSize: 32),
                               ),
                               Text(
                                 "History",
@@ -79,7 +80,12 @@ class ProfileView extends StatelessWidget {
                     children: [
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(
+                              context,
+                              AppRoutes.UpdateProfile.routeName,
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             minimumSize: const Size.fromHeight(56),
                           ),
@@ -91,7 +97,12 @@ class ProfileView extends StatelessWidget {
                       SizedBox(
                         height: 56,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushReplacementNamed(
+                              context,
+                              AppRoutes.Login.routeName,
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.Red,
                             minimumSize: const Size(130, 56),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies/features/auth/view/screens/forgot_password_screen.dart';
 import 'package:movies/features/auth/view/screens/login_screen.dart';
 import 'package:movies/features/auth/view/screens/register_screen.dart';
+import 'package:movies/features/update_profile/view/screens/update_profile_ui.dart';
 import 'package:movies/shared/app_shell.dart';
 import 'package:movies/ui/design/design.dart';
 
@@ -54,6 +56,8 @@ class MyApp extends StatelessWidget {
         AppRoutes.Login.routeName: (context) => LoginScreen(),
         AppRoutes.Register.routeName: (context) => RegisterScreen(),
         AppRoutes.MovieDetails.routeName: (context) => MovieDetailsPage(),
+        AppRoutes.ForgetPassword.routeName: (context) => ForgotPasswordScreen(),
+        AppRoutes.UpdateProfile.routeName: (context) => UpdateProfile(),
       },
     );
   }
