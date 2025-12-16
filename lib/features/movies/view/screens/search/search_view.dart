@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:movies/core/theme/app_assets.dart';
-import 'package:movies/features/home/widgets/movie_card.dart';
 import 'package:movies/features/movies/data/movie_data.dart';
 import 'package:movies/features/movies/data/movie_mockup.dart';
 import 'package:movies/features/search/widgets/search_field.dart';
 
-import '../../../../../../core/theme/app_theme.dart';
+import '../../widgets/movie_card.dart';
+
 class SearchView extends StatefulWidget {
   SearchView({super.key});
 

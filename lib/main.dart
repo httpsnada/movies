@@ -18,14 +18,6 @@ import 'features/movies/view/screens/movie_details/movie_details_page.dart';
 import 'features/movies/view/screens/profile/profile_view.dart';
 import 'features/movies/view/screens/search/search_view.dart';
 
-import 'core/routes/app_routes.dart';
-import 'core/theme/app_theme.dart';
-import 'features/browse/view/browse_view.dart';
-import 'features/home/view/home_view.dart';
-import 'features/movie_details/view/movie_details_page.dart';
-import 'features/profile/view/profile_view.dart';
-import 'features/search/view/search_view.dart';
-import 'features/shared/app_shell.dart';
 
 void main() {
   runApp(
