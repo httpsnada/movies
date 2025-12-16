@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:movies/features/browse/widgets/tab_bar_item.dart';
 
-import '../../home/widgets/movie_card.dart';
-import '../../movies/data/movie_data.dart';
-import '../../movies/data/movie_mockup.dart';
-import '../../../../../../core/theme/app_theme.dart';
-
+import '../../../data/movie_data.dart';
+import '../../../data/movie_mockup.dart';
+import '../../widgets/movie_card.dart';
 
 class BrowseView extends StatefulWidget {
   const BrowseView({super.key});
