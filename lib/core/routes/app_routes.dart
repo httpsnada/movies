@@ -2,6 +2,8 @@ enum AppRoutes {
   OnboardingScreen("OnboardingScreen"),
   Login("LoginScreen"),
   Register("RegisterScreen"),
+  ForgetPassword("ForgetPasswordScreen"),
+  Home("HomeScreen"),
   AppShell("AppShell"),
   Home("HomeView"),
   Browse("BrowseView"),
