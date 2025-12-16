@@ -20,7 +20,7 @@ class _AppShellState extends State<AppShell> {
 
   final List<Widget> _pages = [
     HomeView(),
-    const SearchView(),
+    SearchView(),
     const BrowseView(),
     const ProfileView(),
   ];
