@@ -4,6 +4,11 @@ enum AppRoutes {
   Register("RegisterScreen"),
   ForgetPassword("ForgetPasswordScreen"),
   Home("HomeScreen"),
+  AppShell("AppShell"),
+  Home("HomeView"),
+  Browse("BrowseView"),
+  Search("SearchView"),
+  Profile("ProfileView"),
   MovieDetails("MovieDetailsScreen");
 
   final String routeName;

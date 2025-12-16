@@ -24,6 +24,12 @@ class AppImages {
   static const String popcorn = 'assets/images/popcorn.png';
   static const String watch_now = 'assets/images/watch_now.png';
   static const String forgot_password = 'assets/images/forgot_password.png';
+  static const String movie1 = 'assets/images/movie1.jpg';
+  static const String movie2 = 'assets/images/movie2.jpg';
+  static const String movie3 = 'assets/images/movie3.jpg';
+  static const String scene1 = 'assets/images/scene1.jpg';
+  static const String scene2 = 'assets/images/scene2.jpg';
+  static const String scene3 = 'assets/images/scene3.jpg';
 }
 
 class AppIcons {
