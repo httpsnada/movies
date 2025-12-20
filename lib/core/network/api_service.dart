@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+
 import 'api_exceptions.dart';
 
 class ApiService {
@@ -7,9 +8,15 @@ class ApiService {
   ApiService(this.dio);
 
   /// GET
-  Future<dynamic> getRequest(String endpoint) async {
+  Future<dynamic> getRequest(
+    String endpoint, {
+    Map<String, dynamic>? queryParameters,
+  }) async {
     try {
-      final response = await dio.get(endpoint);
+      final response = await dio.get(
+        endpoint,
+        queryParameters: queryParameters,
+      );
       return response.data;
     } on DioException catch (e) {
       return ApiExceptions.handleError(e);
@@ -17,7 +24,10 @@ class ApiService {
   }
 
   /// POST
-  Future<dynamic> PostRequest(String endpoint, Map<String, dynamic> body) async {
+  Future<dynamic> PostRequest(
+    String endpoint,
+    Map<String, dynamic> body,
+  ) async {
     try {
       final response = await dio.post(endpoint, data: body);
       return response.data;

@@ -17,3 +17,12 @@ class SearchMoviesEvent extends MoviesEvent {
   @override
   List<Object?> get props => [query];
 }
+
+class BrowseByGenre extends MoviesEvent {
+  final String genre;
+
+  BrowseByGenre(this.genre);
+
+  @override
+  List<Object?> get props => [genre];
+}

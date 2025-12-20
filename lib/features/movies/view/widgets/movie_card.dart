@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:movies/core/routes/app_routes.dart';
 import 'package:movies/core/theme/app_theme.dart';
-import 'package:movies/features/movies/data/movie_data.dart';
+import 'package:movies/features/movies/data/Movies.dart';
 
 class MovieCard extends StatelessWidget {
-  final MovieData movie;
+  final MoviesModel movie;
   final double? width;
   final double? height;
 
@@ -33,7 +33,7 @@ class MovieCard extends StatelessWidget {
           child: Stack(
             alignment: Alignment.topLeft,
             children: [
-              Image.asset(movie.image, fit: BoxFit.cover),
+              Image.network(movie.mediumCoverImage ?? "", fit: BoxFit.cover),
 
               Container(
                 padding: EdgeInsets.all(6),

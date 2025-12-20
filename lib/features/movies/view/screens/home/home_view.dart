@@ -1,33 +1,104 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies/core/theme/app_theme.dart';
-import 'package:movies/features/movies/data/movie_mockup.dart';
+import 'package:movies/features/movies/data/Movies.dart';
+import 'package:movies/features/movies/data/movies_repo.dart';
+import 'package:movies/features/movies/view/bloc/movies_bloc.dart';
+import 'package:movies/features/movies/view/bloc/movies_event.dart';
+import 'package:movies/features/movies/view/bloc/movies_state.dart';
 
-import '../../../data/movie_data.dart';
 import '../../widgets/hero_carousel.dart';
 import '../../widgets/movie_card.dart';
 import 'movie_grid_page.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   HomeView({super.key});
 
-  final List<MovieData> movies = MovieMockup.movies;
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  MoviesRepo moviesRepo = MoviesRepo();
+
+  List<MoviesModel>? moviesList;
+
+  Future<void> getMovies() async {
+    final res = await moviesRepo.getMovies();
+    setState(() {
+      moviesList = res;
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getMovies();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          HeroCarousel(movies: movies),
+    return BlocProvider(
+      create: (_) =>
+      MoviesBloc(MoviesRepo())
+        ..add(FetchMoviesEvent()),
+      child: Scaffold(
+        body: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            BlocBuilder<MoviesBloc, MoviesState>
+              (builder: (context, state) {
+              if (state is MoviesLoading) {
+                return const SizedBox(
+                  height: 200,
+                  child: Center(child: CircularProgressIndicator(
+                    color: AppColors.yellow,)),
+                );
+              }
 
-          const SizedBox(height: 20),
+              if (state is MoviesLoaded) {
+                return HeroCarousel(movies: state.movies);
+              }
 
-          _buildCategory(context, title: "Action", movies: movies),
+              if (state is MoviesError) {
+                return Text(state.message);
+              }
 
-          const SizedBox(height: 20),
+              return const SizedBox.shrink();
+            },
+            ),
 
-          _buildCategory(context, title: "Drama", movies: movies),
-        ],
+            const SizedBox(height: 20),
+
+            BlocBuilder<MoviesBloc, MoviesState>
+              (builder: (context, state) {
+              if (state is MoviesLoading) {
+                return const SizedBox(
+                  height: 200,
+                  child: Center(child: CircularProgressIndicator(
+                    color: AppColors.yellow,)),
+                );
+              }
+
+              if (state is MoviesLoaded) {
+                return _buildCategory(
+                    context, title: "All", movies: state.movies);
+              }
+
+              if (state is MoviesError) {
+                return Text(state.message);
+              }
+
+              return const SizedBox.shrink();
+            },
+            ),
+
+            const SizedBox(height: 20),
+
+            // _buildCategory(context, title: "Drama", movies: movies),
+          ],
+        ),
       ),
     );
   }
@@ -35,7 +106,7 @@ class HomeView extends StatelessWidget {
   Widget _buildCategory(
     BuildContext context, {
     required String title,
-    required List<MovieData> movies,
+        required List<MoviesModel> movies,
   }) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

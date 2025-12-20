@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../features/movies/view/bloc/movies_bloc.dart';
+import '../features/movies/view/bloc/movies_event.dart';
 import '../features/movies/view/screens/browse/browse_view.dart';
 import '../features/movies/view/screens/home/home_view.dart';
 import '../features/movies/view/screens/profile/profile_view.dart';
@@ -58,7 +61,19 @@ class _AppShellState extends State<AppShell> {
               top: false,
               child: BottomNavBar(
                 currentIndex: _index,
-                onTap: (i) => setState(() => _index = i),
+                  //onTap: (i) => setState(() => _index = i)
+                  onTap: (i) {
+                    setState(() => _index = i);
+
+                    final bloc = context.read<MoviesBloc>();
+                    if (i == 1) {
+                      bloc.add(BrowseByGenre('Action'));
+                    }
+
+                    if (i == 2) {
+                      bloc.add(FetchMoviesEvent());
+                    }
+                  }
               ),
             ),
           ),

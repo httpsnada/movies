@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:movies/core/theme/app_assets.dart';
 import 'package:movies/core/theme/app_theme.dart';
-import 'package:movies/features/movies/data/movie_data.dart';
+import 'package:movies/features/movies/data/Movies.dart';
 
 import '../../../../../core/routes/app_routes.dart';
 
 class HeroCarousel extends StatefulWidget {
-  final List<MovieData> movies;
+  final List<MoviesModel> movies;
 
   const HeroCarousel({super.key, required this.movies});
 
@@ -18,7 +18,8 @@ class _HeroCarouselState extends State<HeroCarousel> {
   late PageController _pageController;
   int _focusedIndex = 0;
 
-  List<MovieData> get loopedMovies => [
+  List<MoviesModel> get loopedMovies =>
+      [
     ...widget.movies,
     ...widget.movies,
     ...widget.movies,
@@ -70,7 +71,8 @@ class _HeroCarouselState extends State<HeroCarousel> {
             height: deviceHeight * .65,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(loopedMovies[_focusedIndex].image),
+                image: NetworkImage(
+                    loopedMovies[_focusedIndex].mediumCoverImage ?? ""),
                 fit: BoxFit.cover,
               ),
             ),
@@ -133,7 +135,8 @@ class _HeroCarouselState extends State<HeroCarousel> {
                     scale: isFocused,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15),
-                      child: Image.asset(movie.image, fit: BoxFit.cover),
+                      child: Image.network(
+                          movie.mediumCoverImage ?? "", fit: BoxFit.cover),
                     ),
                   ),
                 );

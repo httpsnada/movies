@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:movies/features/movies/data/Movies.dart';
 
-import '../../../data/movie_data.dart';
 import '../../widgets/movie_card.dart';
 
 
 
 class MoviesGridPage extends StatelessWidget {
   final String title;
-  final List<MovieData> movies;
+  final List<MoviesModel> movies;
 
   const MoviesGridPage({super.key, required this.title, required this.movies});
 

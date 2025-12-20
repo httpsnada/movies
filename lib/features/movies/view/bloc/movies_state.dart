@@ -1,5 +1,7 @@
 import 'package:equatable/equatable.dart';
 
+import '../../data/Movies.dart';
+
 abstract class MoviesState extends Equatable {
   @override
   List<Object?> get props => [];
@@ -10,7 +12,7 @@ class MoviesInitial extends MoviesState {}
 class MoviesLoading extends MoviesState {}
 
 class MoviesLoaded extends MoviesState {
-  final List<dynamic> movies;
+  final List<MoviesModel> movies;
 
   MoviesLoaded(this.movies);
 
