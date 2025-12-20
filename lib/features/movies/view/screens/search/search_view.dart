@@ -19,19 +19,7 @@ class SearchView extends StatefulWidget {
 class _SearchViewState extends State<SearchView> {
   final TextEditingController controller = TextEditingController();
 
-  bool _loaded = false;
-
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-
-    if (!_loaded) {
-      context.read<MoviesBloc>().add(FetchMoviesEvent());
-      _loaded = true;
-    }
-  }
-
-  @@override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Column(
@@ -41,8 +29,7 @@ class _SearchViewState extends State<SearchView> {
             onChanged: (value) {
               if (value.isEmpty) {
                 context.read<MoviesBloc>().add(FetchMoviesEvent());
-              }
-              else {
+              } else {
                 context.read<MoviesBloc>().add(SearchMoviesEvent(value));
               }
             },
@@ -67,8 +54,10 @@ class _SearchViewState extends State<SearchView> {
                     return const SizedBox(
                       height: 200,
                       child: Center(
-                          child: CircularProgressIndicator(color: AppColors
-                              .yellow,)),
+                        child: CircularProgressIndicator(
+                          color: AppColors.yellow,
+                        ),
+                      ),
                     );
                   }
 
@@ -84,12 +73,12 @@ class _SearchViewState extends State<SearchView> {
                     }
                     return GridView.builder(
                       gridDelegate:
-                      const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        childAspectRatio: 0.66,
-                        crossAxisSpacing: 12,
-                        mainAxisSpacing: 12,
-                      ),
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            childAspectRatio: 0.66,
+                            crossAxisSpacing: 12,
+                            mainAxisSpacing: 12,
+                          ),
                       itemCount: state.movies.length,
                       itemBuilder: (context, index) {
                         final movie = state.movies[index];
@@ -107,7 +96,6 @@ class _SearchViewState extends State<SearchView> {
                   }
                   return const SizedBox.shrink();
                 },
-
               ),
             ),
           ),
@@ -115,5 +103,4 @@ class _SearchViewState extends State<SearchView> {
       ),
     );
   }
-
 }

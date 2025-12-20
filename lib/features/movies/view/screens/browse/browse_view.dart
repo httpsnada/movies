@@ -4,8 +4,6 @@ import 'package:movies/features/movies/view/bloc/movies_state.dart';
 import 'package:movies/ui/common/tab_bar_item.dart';
 
 import '../../../../../core/theme/app_theme.dart';
-import '../../../data/movie_data.dart';
-import '../../../data/movie_mockup.dart';
 import '../../bloc/movies_bloc.dart';
 import '../../bloc/movies_event.dart';
 import '../../widgets/movie_card.dart';
@@ -50,82 +48,70 @@ class _BrowseViewState extends State<BrowseView>
     super.dispose();
   }
 
-  bool _loaded = false;
-
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-
-    if (!_loaded) {
-      context.read<MoviesBloc>().add(BrowseByGenre(genres[0]));
-      _loaded = true;
-    }
-  }
-
-  @@override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Column(
         children: [
-            TabBar(
-              tabAlignment: TabAlignment.start,
-              dividerColor: Colors.transparent,
-              controller: tabController,
-              isScrollable: true,
-              padding: EdgeInsets.zero,
-              labelPadding: const EdgeInsets.symmetric(horizontal: 6),
-              tabs: List.generate(
-                genres.length,
-                (index) => Tab(
-                  child: TabBarItem(
-                    title: genres[index],
-                    isSelected: tabController.index == index,
-                  ),
+          TabBar(
+            tabAlignment: TabAlignment.start,
+            dividerColor: Colors.transparent,
+            controller: tabController,
+            isScrollable: true,
+            padding: EdgeInsets.zero,
+            labelPadding: const EdgeInsets.symmetric(horizontal: 6),
+            tabs: List.generate(
+              genres.length,
+              (index) => Tab(
+                child: TabBarItem(
+                  title: genres[index],
+                  isSelected: tabController.index == index,
                 ),
               ),
-              onTap: (index) {
-                context.read<MoviesBloc>().add(
-                  BrowseByGenre(genres[index]),
-                );
-              },
             ),
+            onTap: (index) {
+              context.read<MoviesBloc>().add(BrowseByGenre(genres[index]));
+            },
+          ),
 
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(16),
-                child: BlocBuilder<MoviesBloc, MoviesState>(
-                  builder: (context, state) {
-                    if (state is MoviesLoading) {
-                      return const SizedBox(
-                        height: 200,
-                        child: Center(
-                            child: CircularProgressIndicator(color: AppColors
-                                .yellow,)),
-                      );
-                    }
-
-                    if (state is MoviesLoaded) {
-                      return GridView.builder(
-                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          childAspectRatio: 0.66,
-                          crossAxisSpacing: 12,
-                          mainAxisSpacing: 12,
+              child: BlocBuilder<MoviesBloc, MoviesState>(
+                builder: (context, state) {
+                  if (state is MoviesLoading) {
+                    return const SizedBox(
+                      height: 200,
+                      child: Center(
+                        child: CircularProgressIndicator(
+                          color: AppColors.yellow,
                         ),
-                        itemCount: state.movies.length,
-                        itemBuilder: (context, index) {
-                          return MovieCard(movie: state.movies[index]);
-                        },
-                      );
-                    }
+                      ),
+                    );
+                  }
 
-                    if (state is MoviesError) {
-                      return Center(child: Text(state.message));
-                    }
-                    return const SizedBox.shrink();
-                  },
-                )
+                  if (state is MoviesLoaded) {
+                    return GridView.builder(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            childAspectRatio: 0.66,
+                            crossAxisSpacing: 12,
+                            mainAxisSpacing: 12,
+                          ),
+                      itemCount: state.movies.length,
+                      itemBuilder: (context, index) {
+                        return MovieCard(movie: state.movies[index]);
+                      },
+                    );
+                  }
 
+                  if (state is MoviesError) {
+                    return Center(child: Text(state.message));
+                  }
+                  return const SizedBox.shrink();
+                },
+              ),
             ),
           ),
         ],
@@ -133,13 +119,12 @@ class _BrowseViewState extends State<BrowseView>
     );
   }
 
-
-// List<String> getCategories() {
-//   final Set<String> genres = {};
-//
-//   for (var movie in movies) {
-//     genres.addAll(movie.genres);
-//   }
-//   return genres.toList();
-// }
+  // List<String> getCategories() {
+  //   final Set<String> genres = {};
+  //
+  //   for (var movie in movies) {
+  //     genres.addAll(movie.genres);
+  //   }
+  //   return genres.toList();
+  // }
 }
