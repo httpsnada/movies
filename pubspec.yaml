@@ -46,6 +46,8 @@ dependencies:
 
   flutter_bloc: ^9.1.1
   equatable: ^2.0.7
+  url_launcher: ^6.3.2
+  flutter_native_splash: ^2.4.7
 
 
 dev_dependencies:
@@ -101,3 +103,21 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_native_splash:
+  color: "#121312"
+  image: 'assets/images/logo2.png'
+  branding: 'assets/images/branding.png'
+
+
+  android_12:
+    color: "#121312"
+    image: 'assets/images/logo2.png'
+    branding: 'assets/images/branding.png'
+
+
+  android: true
+  ios: true
+  web: false
+
+
+  branding_mode: bottom

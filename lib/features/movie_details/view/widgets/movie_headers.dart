@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:movies/core/theme/app_theme.dart';
 import 'package:movies/features/movie_details/data/movie_details_model.dart';
 
+import '../../../../core/utils/url_helper.dart';
+
 class MovieHeaders extends StatelessWidget {
   final MovieDetailsModel movie;
 
@@ -84,7 +86,9 @@ class MovieHeaders extends StatelessWidget {
         SizedBox(height: 8),
 
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            openMovieUrl(movie.url ?? "");
+          },
           style: ElevatedButton.styleFrom(
             foregroundColor: AppColors.white,
             backgroundColor: AppColors.red,
