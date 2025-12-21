@@ -128,7 +128,7 @@ class _HeroCarouselState extends State<HeroCarousel> {
                     Navigator.pushNamed(
                       context,
                       AppRoutes.MovieDetails.routeName,
-                      arguments: movie,
+                      arguments: movie.id,
                     );
                   },
                   child: Transform.scale(

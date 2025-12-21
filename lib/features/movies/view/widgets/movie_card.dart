@@ -22,7 +22,7 @@ class MovieCard extends StatelessWidget {
         Navigator.pushNamed(
           context,
           AppRoutes.MovieDetails.routeName,
-          arguments: movie,
+          arguments: movie.id,
         );
       },
       child: SizedBox(

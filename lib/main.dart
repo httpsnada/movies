@@ -12,15 +12,14 @@ import 'core/network/dio_client/dio_auth_client.dart';
 import 'core/routes/app_routes.dart';
 import 'core/theme/app_theme.dart';
 import 'features/auth/view/bloc/auth_bloc.dart';
+import 'features/movie_details/view/screens/movie_details_page.dart';
 import 'features/movies/data/movies_repo.dart';
 import 'features/movies/view/bloc/movies_bloc.dart';
 import 'features/movies/view/bloc/movies_event.dart';
 import 'features/movies/view/screens/browse/browse_view.dart';
 import 'features/movies/view/screens/home/home_view.dart';
-import 'features/movies/view/screens/movie_details/movie_details_page.dart';
 import 'features/movies/view/screens/profile/profile_view.dart';
 import 'features/movies/view/screens/search/search_view.dart';
-
 
 void main() {
   runApp(
